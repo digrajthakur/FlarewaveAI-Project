@@ -18,6 +18,7 @@ jobs:
           run: npm run build
           env:
           NODE_OPTIONS: --openssl-legacy-provider
+
         - name: Archive Production Artifact
           uses: actions/upload-artifact@master
           with:
@@ -43,5 +44,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CODESNAPR_WEB }}'
           channelId: live
           projectId: codesnapr-web
-        env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels
+        # env:
+        #   FIREBASE_CLI_PREVIEWS: hostingchannels
